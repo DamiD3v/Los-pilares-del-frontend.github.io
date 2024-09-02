@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Los pilares del desarrollo web frontend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* #region FontStyles */
+        .lato-thin {
+            font-family: "Lato", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .lato-light {
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .lato-regular {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .lato-bold {
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .lato-black {
+            font-family: "Lato", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .lato-thin-italic {
+            font-family: "Lato", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .lato-light-italic {
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .lato-regular-italic {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .lato-bold-italic {
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .lato-black-italic {
+            font-family: "Lato", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        .inter-lighter {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: lighter;
+            font-style: normal;
+        }
+
+        /*#endregion Font styles */
+
+        /* #region Styles */
+        body {
+            background-color: #000000;
+            font-family: 'Lato', Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            /* Fondo de la página */
+        }
+
+        p {
+            color: #000000;
+            font-size: 1.4vw;
+        }
+
+        img {
+            width: 14vw;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter', Arial, Helvetica, sans-serif;
+            font-weight: 300;
+            font-size: x-large;
+            text-wrap: pretty;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            height: 100vh;
+            padding: 0px;
+            padding-inline: 4vw;
+        }
+
+        .list-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 74vw;
+            font-weight: 900;
+            margin-top: 5vw;
+            margin-bottom: 6vw;
+            padding: 0px;
+        }
+
+        .list-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            padding-inline: 1%;
+            border: 2px solid black;
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            --tw-shadow: 8px 10px 0px black;
+            --tw-shadow-colored: 8px 10px 0px var(--tw-shadow-color);
+        }
+
+
+        .main-title {
+            font-size: 3vw;
+            margin: 0px;
+            margin-top: 2vw;
+        }
+
+        .paragraph-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 60%;
+            text-wrap: pretty;
+        }
+
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 4%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .credits-button {
+            width: 20vw;
+            max-width: 100%;
+            padding: 1vw;
+            padding-inline: 0.5vw;
+            background-color: black;
+            color: whitesmoke;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            font-size: 1.6vw;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .credits-button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+
+        /* #endregion */
+    </style>
+</head>
+
+<body>
+    <section class="main-container">
+        <h1 class="main-title">¡Bienvenido/a a la web de los pilares del Frontend web!</h1>
+        <div class="paragraph-container">
+            <p>Esta web es una web que hice para que conozcamos lo primero que uno debe aprender para ser un
+                desarrollador
+                web.
+            </p>
+        </div>
+        <ul class="list-container">
+            <li class="list-item">HTML<img src="./Assets/HTMLIcon.svg" alt="HTML icon"></li>
+            <li class="list-item">CSS<img src="./Assets/CSSIcon.svg" alt="CSS icon"></li>
+            <li class="list-item">Javascript<img src="./Assets/JavascriptIcon.svg" alt="Javascript icon"></li>
+        </ul>
+        <script>
+            let modalCount = 0; // Inicializa el contador para tener control del número de modales
+
+            /* Creación del botón de créditos */
+            const button = document.createElement("button");
+            button.innerHTML = "Créditos";
+            button.className = "credits-button"
+            const mainContainer = document.querySelector(".main-container")
+            mainContainer.appendChild(button);
+
+            button.addEventListener("click", () => {
+                if (modalCount > 0) { // Revisa si ya hay algún modal mostrándose
+                    alert("Advertencia: ¡No se pueden abrir más de un cartel al mismo tiempo!");
+                    return; // Termina la función si ya hay un modal mostrándose
+                }
+
+                modalCount++; //Incrementar contador de modales
+                /* Contenido del modal */
+                const modal = document.createElement("div");
+                modal.className = "modal"; // Add a class to the modal element
+                document.body.appendChild(modal);
+
+                const modalContent = document.createElement("h2");
+                modalContent.innerHTML = "Gracias a mis compañeros y profesora de la escuela Sarmiento por sus valiosas enseñanzas";
+                modal.appendChild(modalContent);
+
+                /* Tiempo de desaparición del modal */
+                setTimeout(() => {
+                    modal.style.display = "none";
+                    modalCount--;
+                }, 2500);
+            });
+        </script>
+    </section>
+</body>
+
+</html>
